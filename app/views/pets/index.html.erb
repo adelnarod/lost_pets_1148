@@ -1,0 +1,7 @@
+
+<div class="container">
+  <h1>Pets</h1>
+  <% @pets.each do |pet| %>
+    <p><%= pet.name %> - <%= link_to "Delete", pet_path(pet), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+  <% end %>
+</div>
